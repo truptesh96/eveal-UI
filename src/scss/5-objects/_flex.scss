@@ -26,7 +26,7 @@
 
 .o-flex__col {
   width: var(--col-width, 100%);
-  --col-width: calc( (100% - (var(--col-count) - 1) * var(--col-gap)) / var(--col-count) );
+  --col-width: calc( (100% - (var(--col-count) - 1) * var(--col-gap, 0.000000001px)) / var(--col-count) );
 }
 
 // FLEX MODIFIERS
