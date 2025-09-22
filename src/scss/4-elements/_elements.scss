@@ -1,0 +1,56 @@
+@use '../1-settings/typography' as *;
+@use '../2-tools/functions' as *;
+@use '../2-tools/mixins' as *;
+
+[class*='e-title'] {
+  font-size: var(--fs,  #{rem(20px)});
+  --color : var(--clr-primary);
+}
+
+.e-title {
+
+  @include min-media(sm) {
+
+    &--sm {
+      --fs: #{rem(20px)};
+    }
+
+    &--md {
+      --fs: #{rem(30px)};
+    }
+
+    &--lg {
+      --fs: #{rem(36px)};
+    }
+  }
+
+  @include min-media(lg) {
+
+    &--sm {
+      --fs: #{rem(23px)};
+    }
+
+    &--md {
+      --fs: #{rem(38px)};
+    }
+
+    &--lg {
+      --fs: #{rem(44px)};
+    }
+  }
+
+  @include min-media(xl) {
+  
+    &--sm {
+      --fs: #{rem(25px)};
+    }
+
+    &--md {
+      --fs: #{rem(48px)};
+    }
+
+    &--lg {
+      --fs: #{rem(52px)};
+    }
+  }
+}

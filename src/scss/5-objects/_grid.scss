@@ -1,0 +1,56 @@
+@use '../2-tools/mixins' as *;
+@use '../2-tools/functions' as *;
+@use '../1-settings/spacing' as *;
+
+// =============================================================================
+// GRID
+// =============================================================================
+
+.o-grid {
+  width: 100%;
+  display: grid;
+  row-gap: var(--row-gap);
+}
+
+// Default container
+@include min-media(md) {
+  .o-grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: column;
+
+    > :first-child {
+      grid-column: var(--gc-start, 8) / var(--gc-start-span, span 4);
+    }
+    > :last-child {
+      grid-column: var(--gc-end, 1) / var(--gc-end-span, span 6);
+    }
+  }
+
+  .is-reverse .o-grid {
+    --gc-start: 2;
+    --gc-end: 7;
+  }
+}
+
+// Offset container
+@include min-media(xl) {
+  .o-grid--sm {
+    --gc-start: 8;
+    --gc-start-span: span 4;
+    --gc-end: 2;
+    --gc-end-span: span 5;
+  }
+
+  .is-reverse .o-grid--sm {
+    --gc-start: 2;
+    --gc-end: 7;
+  }
+}
+
+// GRID MODIFIERS
+
+@include max-media(md) {
+  .has-sm-order .o-grid > :last-child {
+    order: -1;
+  }
+}

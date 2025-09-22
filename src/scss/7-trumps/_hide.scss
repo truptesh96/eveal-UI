@@ -1,0 +1,25 @@
+@use '../2-tools/mixins' as *;
+@use '../2-tools/functions' as *;
+
+// =============================================================================
+// HIDE
+// =============================================================================
+
+.u-hide {
+  display: none !important;
+}
+
+@include max-media(md) {
+
+  .u-sm-hide {
+    display: none !important;
+  }
+  
+}
+
+@include min-media(md) { 
+  
+  .u-md-hide {
+    display: none !important;
+  }
+}

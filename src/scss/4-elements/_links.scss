@@ -1,0 +1,22 @@
+// =============================================================================
+// LINKS
+// =============================================================================
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:active,
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px dotted;
+  }
+}

@@ -1,0 +1,28 @@
+@use '../1-settings/typography' as *;
+@use '../1-settings/colors' as *;
+@use '../1-settings/typography' as *;
+@use '../2-tools/functions' as *;
+@use '../2-tools/mixins' as *;
+
+
+// =============================================================================
+// FONT SIZE MIXINS
+// =============================================================================
+
+[class*=fs] {
+  font-size: var(--fs, 1rem);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font: 400 var(--fs, #{rem(20px)})/1.2em $font-family-heading;
+}
+
+@each $selector, $values in $font-sizes {
+  #{$selector} {
+   --fs: clamp(
+      #{rem(map-get($values, min))},
+      #{rem(map-get($values, mid))},
+      #{rem(map-get($values, max))} 
+    );
+  }
+}

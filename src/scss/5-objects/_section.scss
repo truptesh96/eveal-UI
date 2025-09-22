@@ -1,0 +1,15 @@
+@use '../2-tools/mixins' as *;
+@use '../2-tools/functions' as *;
+
+// =============================================================================
+// SECTION OBJECT
+// =============================================================================
+
+.o-section {
+  padding-block: var(--pt, #{rem(36px)}) var(--pb, #{rem(36px)});
+
+  @include min-media(md) {
+    --pt: #{rem(40px)};
+    --pb: #{rem(40px)};
+  }
+}

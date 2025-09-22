@@ -1,0 +1,18 @@
+// ==========================================================================
+// COLOR VARIABLES (Settings Layer)
+// ==========================================================================
+
+$clr-primary: #25497a !default;
+$clr-secondary: #656565 !default;
+$clr-accent: #fffbf6 !default;
+$clr-white: #fff !default;
+$clr-black: #000 !default;
+
+// Map of colors for easier management
+$colors: (
+  "primary": $clr-primary,
+  "secondary": $clr-secondary,
+  "accent": $clr-accent,
+  "white": $clr-white,
+  "black": $clr-black,
+);

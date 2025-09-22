@@ -1,0 +1,32 @@
+@use '../2-tools/functions' as *;
+@use '../2-tools/mixins' as *;
+
+.c-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--btn-border-color);  
+  background-color: var(--btn-bg);
+  padding: var(--btn-icon-padding, rem(19px) rem(16));
+  border-radius: var(--btn-border-radius, rem(50px));
+  transition: var(--tr-speed) var(--tr-ease);
+  transition-property: color, rotate, border-color;
+  
+  &::after {
+    content: '';
+    height: rem(10);
+    width: rem(10);
+    border: solid;
+    border-width: 0 1px 1px 0;
+    rotate: -45deg;
+  }
+
+  &::before {
+    content: '';
+    border: solid;
+    border-width: 1px 0 0;
+    width: rem(16);
+    background-color: var(--btn-color);
+    margin-inline-end: rem(-11);
+  }
+}

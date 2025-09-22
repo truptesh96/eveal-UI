@@ -1,0 +1,109 @@
+@use '../1-settings/spacing' as *;
+@use '../2-tools/mixins' as *;
+@use '../2-tools/functions' as *;
+
+@each $size, $value in $spacing {
+
+  .mt-#{$size} {
+    margin-top: #{$value}rem;
+  }
+  
+  .mb-#{$size} {
+    margin-bottom: #{$value}rem;
+  }
+  
+  .my-#{$size} {
+    margin-block: #{$value}rem;
+  }
+  
+  .pt-#{$size} {
+    padding-top: #{$value}rem;
+  }
+  
+  .pb-#{$size} {
+    padding-bottom: #{$value}rem;
+  }
+  
+  .py-#{$size} {
+    padding-block: #{$value}rem;
+  }
+
+  .pxy-#{$size} {
+    padding: #{$value}rem;
+  }
+
+  .mxy-#{$size} {
+    margin: #{$value}rem;
+  }
+  
+  .px-#{$size} {
+    padding-inline: #{$value}rem;
+  }
+
+  .ml-#{$size} {
+    margin-left: var(--pull-#{$size}, #{$value}rem);
+  }
+  .mr-#{$size} {
+    margin-right: var(--pull-#{$size}, #{$value}rem);
+  }
+  .pl-#{$size} {
+    padding-left: var(--pull-#{$size}, #{$value}rem);
+  }
+  .pr-#{$size} {
+    padding-right: var(--pull-#{$size}, #{$value}rem);
+  }
+
+  @include min-media(md) {
+    .py-md-#{$size} {
+      padding-block: #{$value}rem;
+    }
+
+    .px-md-#{$size} {
+      padding-block: #{$value}rem;
+    }
+
+    .pxy-md-#{$size} {
+      padding: #{$value}rem;
+    }
+   
+    .mxy-md-#{$size} {
+      margin: #{$value}rem;
+    }
+
+    .mt-md-#{$size} {
+      margin-top: #{$value}rem;
+    }
+    .mb-md-#{$size} {
+      margin-bottom: #{$value}rem;
+    }
+    .my-md-#{$size} {
+      margin-block: #{$value}rem;
+    }
+    .pt-md-#{$size} {
+      padding-top: #{$value}rem;
+    }
+    .pb-md-#{$size} {
+      padding-bottom: #{$value}rem;
+    }
+    .py-md-#{$size} {
+      padding-block: #{$value}rem;
+    }
+
+    .ml-md-#{$size} {
+      margin-left: var(--pull-#{$size}, #{$value}rem);
+    }
+    .mr-md-#{$size} {
+      margin-right: var(--pull-#{$size}, #{$value}rem);
+    }
+    .pl-md-#{$size} {
+      padding-left: var(--pull-#{$size}, #{$value}rem);
+    }
+    .pr-md-#{$size} {
+      padding-right: var(--pull-#{$size}, #{$value}rem);
+    }
+  }
+}
+
+.mx-auto {
+  margin-inline: auto;
+}

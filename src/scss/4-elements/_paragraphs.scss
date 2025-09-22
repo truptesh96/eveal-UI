@@ -1,0 +1,14 @@
+@use '../1-settings/colors' as *;
+@use '../2-tools/functions' as *;
+@use '../2-tools/mixins' as *;
+
+// Paragraphs
+p {
+  color: var(--color, $clr-secondary);
+  margin-bottom: rem(16px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+}
