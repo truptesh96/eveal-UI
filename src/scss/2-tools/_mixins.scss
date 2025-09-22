@@ -53,12 +53,6 @@
   }
 }
 
-// Grid System
-@mixin col($n, $total: 12) {
-  $col-width: $n * math.div(100%, $total);
-  --col-width: #{$col-width};
-}
-
 // Media query mixin for min-width (mobile-first)
 @mixin min-media($bp) {
   @media (min-width: map.get($breakpoints, $bp)) {
