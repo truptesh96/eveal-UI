@@ -26,30 +26,8 @@
 
 .o-flex__col {
   width: var(--col-width, 100%);
+  --col-width: calc( (100% - (var(--col-count) - 1) * var(--col-gap)) / var(--col-count) );
 }
-
-@include min-media(sm) {
-  @for $x from 1 through 12 {
-    @if $x <= 4 $x >= 9 {
-      .o-flex__col-#{$x} {
-        @include col($x);
-      }
-    } @else {
-      .o-flex__col-#{$x} {
-        --col-width : 50%;
-      }
-    }
-  }
-}
-
-@include min-media(md) {
-  @for $x from 1 through 12 {
-    .o-flex__col-md-#{$x} {
-      @include col($x);
-    }
-  }
-}
-
 
 // FLEX MODIFIERS
 .is-reverse {
