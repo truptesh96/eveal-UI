@@ -1,2 +1,2 @@
 // Load styles
-import './scss/main.scss'
+import './sass/style.scss'

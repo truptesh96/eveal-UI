@@ -1,0 +1,52 @@
+$unicode-range: U+0000-007F;
+$gotham-fonts: (
+  300: "Light",
+  400: "Book",
+  500: "Medium",
+  700: "Bold"
+  600: "Bold"
+);
+
+
+$fonts-path: '../src/assets/fonts/Gotham-#{$name}.woff2';
+$italic-fonts : '../src/assets/fonts/Gotham-#{$name}Italic.woff2';
+
+@each $weight, $name in $gotham-fonts {
+  @font-face {
+    font-family: 'Gotham';
+    src: url($fonts-path) format('woff2');
+    font-weight: #{$weight};
+    font-style: normal;
+    font-display: swap;
+    unicode-range: $unicode-range;
+  }
+ 
+  @font-face {
+    font-family: 'Gotham';
+    src: url($italic-fonts) format('woff2');
+    font-weight: #{$weight};
+    font-style: italic;
+    font-display: swap;
+    unicode-range: $unicode-range; 
+  }
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'),
+        url('../src/assets/fonts/PlayfairDisplay-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    unicode-range: $unicode-range;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'),
+        url('../src/assets/fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: $unicode-range;
+}

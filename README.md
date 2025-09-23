@@ -58,12 +58,12 @@ npm run build
 2. Use responsive units (`em`, `rem`, `%`, `auto`, `fit-content`, `max-content`) instead of fixed `px` values where possible.
     - Use `em` for properties that should scale relative to their parent font size, such as dynamic margins and paddings within generic elements.
     - Use `rem` for sizing relative to the root font size (`:root`), making it easier to adjust the overall scale by changing a single root value.
-    - Use `%`, `auto`, `fit-content`, and `max-content` for flexible layout widths, heights, and spacing that adapt proportionally within their containers.
+    - Use `%`, `auto`, `fit-content`, and `max-content` for flexible layout widths, heights, and spacing that adapt proportionally within their wrappers.
 2. Use CSS Grid and Flexbox for layout – avoid floats, fixed widths.
 2. Prefer `gap` over `margin` for spacing in layouts (grid, flex).
 2. Use shorthands where appropriate (ex: `font: 400 1.25rem/1.5 Arial`)
 2. Use `aspect-ratio` rather than fixed width/height for media and blocks.
-2. Use `object-fit: cover` for media to control how they adapt and scale within their containers.
+2. Use `object-fit: cover` for media to control how they adapt and scale within their wrappers.
 2. Use `currentColor` or `inherit` where applicable for inheriting styles.
 2. Avoid deep specificity – keep selectors simple and modular.
 2. Limit SCSS nesting to 2 levels deep – often `&` can be skipped for clarity.
