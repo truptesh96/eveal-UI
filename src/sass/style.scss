@@ -1,188 +1,21 @@
-// Breakpoints map
-$breakpoints: (
-  sm: 768px,
-  md: 992px,
-  lg: 1200px,
-  xl: 1367px,
-  xxl: 1600px,
-);
-
-// Color variables
-$clr-primary: #E35205 !default;
-$clr-secondary: #16232B !default;
-$clr-accent: #EEE6CD !default;
-$clr-white: #fff !default;
-$clr-black: #000 !default;
-$colors: (
-  "primary": $clr-primary,
-  "secondary": $clr-secondary,
-  "accent": $clr-accent,
-  "white": $clr-white,
-  "black": $clr-black,
-);
-
-// Spacings
-$spacing: ( 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, );
-
-// wrapper
-$wrapper: 1730px;
-$wrapper-sm: 1476px;
-$wrapper-padding: 32px;
-
-// FONT FAMILIES
-// =============================================================================
-
-$font-family-primary: 'upgrade-lights';
-$font-family-secondary: 'upgrade';
-$font-family-heading: 'playfair-display';
-
-
-// Typography
-$font-size-root : 16px; // Will be added as font size of html element which will be used to calculate rem
-$font-size-body : 14px;
-$font-size-body-desktop : 16px;
-$font-sizes: (  
-  ".h1, h1": (min: 20px, mid: 3vw, max: 32px),
-  ".h2, h2": (min: 20px, mid: 2.75vw, max: 28px),
-  ".h3, h3": (min: 20px, mid: 2vw, max: 24px),
-  ".h4, h4": (min: 20px, mid: 1.75vw, max: 22px),
-  ".h5, h5": (min: 20px, mid: 1.5vw, max: 22px),
-  ".h6, h6": (min: 20px, mid: 1.35vw, max: 22px), 
-
-  // Theme Specific Font Sizes
-  ".fs40": (min: 20px, mid: 2.35vw, max: 40px),
-);
-
-
+@use 'settings' as *;
 @use 'sass:math';
 @use "sass:map";
 
-
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
+// Reset CSS
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
+var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, 
+nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0; padding: 0; border: 0; vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-html {
-  font-size: 16px;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+html { font-size: 16px; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+form, table { width: 100%; max-width: 100%; }
 
 // Functions
 @function space($size) {
@@ -204,14 +37,8 @@ table {
 
 // Mixins
 // Accessibility
-@mixin visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+@mixin visually-hidden { 
+  clip: rect(0 0 0 0); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; 
 }
 
 // Form Styles
@@ -273,7 +100,7 @@ table {
 
 :is(h1, h2, h3, h4, h5, h6) { font: 400 var(--fs, #{rem(20px)})/1.2em $font-family-heading; 
   color: var(--color, $clr-black);
-  margin-bottom: max(rem(30), 0.75em);
+  margin-bottom: 0.75em;
   letter-spacing: -0.01em;
 }
 
@@ -326,9 +153,10 @@ a {
   @each $name, $value in $colors {
     --clr-#{$name}: #{$value};
   }
-  --wrapper: #{$wrapper};
-  --wrapper-sm: #{$wrapper-sm};  
-  --wrapper-padding: #{$wrapper-padding};
+  --wrapper-min: #{map-get(map-get($containers, default), min)};
+  --wrapper-mid: #{map-get(map-get($containers, default), mid)};
+  --wrapper-max: #{map-get(map-get($containers, default), max)};
+
   --tr-speed: 0.2s;
   --tr-ease: ease;
 }
@@ -338,69 +166,16 @@ a {
   --color : var(--clr-primary);
 }
 
-.e-title {
+ 
 
-  @include min-media(sm) {
-
-    &--sm {
-      --fs: #{rem(20px)};
-    }
-
-    &--md {
-      --fs: #{rem(30px)};
-    }
-
-    &--lg {
-      --fs: #{rem(36px)};
-    }
-  }
-
-  @include min-media(lg) {
-
-    &--sm {
-      --fs: #{rem(23px)};
-    }
-
-    &--md {
-      --fs: #{rem(38px)};
-    }
-
-    &--lg {
-      --fs: #{rem(44px)};
-    }
-  }
-
-  @include min-media(xl) {
-  
-    &--sm {
-      --fs: #{rem(25px)};
-    }
-
-    &--md {
-      --fs: #{rem(48px)};
-    }
-
-    &--lg {
-      --fs: #{rem(52px)};
-    }
-  }
-}
-
-ul,
-dl,
-ol {
+ul, dl, ol {
   margin-inline: 0;
   padding-left: 1.15em;
   list-style: none;
 }
 
-ul {
-  list-style: disc;
-}
-
-ol {
-  list-style: decimal;
-}
+ul { list-style: disc; }
+ol { list-style: decimal; }
 
 li {
   margin-bottom: 0.5rem;
@@ -438,15 +213,20 @@ p {
   }
   
 }
-
+ 
 .o-wrapper {
   width: 100%;
-  max-width: clamp(1200px, 93.02083333333333vw, var(--wrapper));
+  max-width: clamp(var(--wrapper-min), var(--wrapper-mid), var(--wrapper-max));
   margin-inline: auto;
-  padding-inline: $wrapper-padding;
+}
 
-  &--sm {
-    max-width: clamp(1200px, 79.89583333333333vw, var(--wrapper-sm));
+@each $name, $values in $containers {
+  @if $name != default {
+    .o-wrapper--#{$name} {
+      --wrapper-min: #{map-get($values, min)};
+      --wrapper-mid: #{map-get($values, mid)};
+      --wrapper-max: #{map-get($values, max)};
+    }
   }
 }
 
@@ -575,7 +355,7 @@ p {
     .c-button__label {
       --btn-border-color: var(--btn-disabled-border-color);
     }
-
+ 
     &:hover {
       transform: none;
     }

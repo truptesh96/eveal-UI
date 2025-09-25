@@ -1,0 +1,62 @@
+// Breakpoints map
+$breakpoints: (
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1367px,
+  xxl: 1600px,
+);
+
+// Color variables
+$clr-primary: #E35205 !default;
+$clr-secondary: #16232B !default;
+$clr-accent: #EEE6CD !default;
+$clr-white: #fff !default;
+$clr-black: #000 !default;
+$colors: (
+  "primary": $clr-primary,
+  "secondary": $clr-secondary,
+  "accent": $clr-accent,
+  "white": $clr-white,
+  "black": $clr-black,
+);
+
+// Spacings
+$spacing: ( 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, );
+
+// wrapper
+$wrapper: 1730px;
+$wrapper-sm: 1476px;
+
+$containers: (
+  default: (min: 1200px, mid: 93vw, max: 1730px),
+  sm: (min: 980px,  mid: 80vw, max: 1476px),
+  xs: (min: 640px,  mid: 64vw, max: 985px),
+);
+
+
+$wrapper-padding: 32px;
+
+// FONT FAMILIES
+// =============================================================================
+
+$font-family-primary: 'upgrade-lights';
+$font-family-secondary: 'upgrade';
+$font-family-heading: 'playfair-display';
+
+
+// Typography
+$font-size-root : 16px; // Will be added as font size of html element which will be used to calculate rem
+$font-size-body : 14px;
+$font-size-body-desktop : 16px;
+$font-sizes: (  
+  ".h1, h1": (min: 20px, mid: 3vw, max: 32px),
+  ".h2, h2": (min: 20px, mid: 2.75vw, max: 28px),
+  ".h3, h3": (min: 20px, mid: 2vw, max: 24px),
+  ".h4, h4": (min: 20px, mid: 1.75vw, max: 22px),
+  ".h5, h5": (min: 20px, mid: 1.5vw, max: 22px),
+  ".h6, h6": (min: 20px, mid: 1.35vw, max: 22px), 
+
+  // Theme Specific Font Sizes
+  ".fs40": (min: 20px, mid: 2.35vw, max: 40px),
+);
