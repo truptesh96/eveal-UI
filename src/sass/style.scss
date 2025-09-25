@@ -106,11 +106,7 @@ form, table { width: 100%; max-width: 100%; }
 
 @each $selector, $values in $font-sizes {
   #{$selector} {
-   --fs: clamp(
-      #{rem(map-get($values, min))},
-      #{rem(map-get($values, mid))},
-      #{rem(map-get($values, max))} 
-    );
+   --fs: clamp( #{rem(map-get($values, min))}, #{rem(map-get($values, mid))}, #{rem(map-get($values, max))} );
   }
 }
 
