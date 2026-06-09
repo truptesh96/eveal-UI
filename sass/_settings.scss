@@ -1,0 +1,32 @@
+// Color variables
+$clr-primary: #E35205;
+$clr-secondary: #16232B;
+$clr-accent: #EEE6CD;
+$clr-white: #fff;
+$clr-black: #000;
+
+$colors: (
+  "primary": $clr-primary,
+  "secondary": $clr-secondary,
+  "accent": $clr-accent,
+  "white": $clr-white,
+  "black": $clr-black,
+);
+
+// Container settings
+$container: 1560px;
+$container-padding: 32px;
+
+
+// CSS Variables
+:root {
+  @each $name, $value in $colors {
+    --clr-#{$name}: #{$value};
+  }
+
+  --wrapper-width: #{$container};
+  --wrapper-padding: #{$container-padding};
+
+}
+
+

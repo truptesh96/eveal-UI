@@ -4,275 +4,345 @@
               <meta charset="UTF-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
               <title>Cabot – UI</title>
-			  <link rel="stylesheet" href="dist/style.css">
+			  <link rel="stylesheet" href="style.css">
             </head>
             <body>
 
         <main>
+		
 			<h1 class="visually-hidden">eveal UI &mdash; Sections</h1>
-			<section class="o-section">
-				<div class="o-wrapper">
-					<h2 class="e-title">Eveal UI &mdash; Components</h2>
-					<h3 class="e-title e-title--sm">Headings</h3>
-					<div class="o-flex is-center grid-2" >
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<h1 class="ch-sm">h1: Headline would be placed here.</h1>
-							<label>Secector: <b>.h1, h1</b></label>
-						</div>
-						
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<h2>h2: Headline would be placed here.</h2>
-							<label>Secector: <b>.h2, h2</b></label>
-						</div>
-						
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<h3 >h3: Headline would be placed here.</h3>
-							<label>Secector: <b>.h3, h3</b></label>
-						</div>
-						
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<h4>h4: Headline would be placed here.</h4>
-							<label>Secector: <b>.h4, h4</b></label>
-						</div>
+			<section class="c-block typography-guide">
+    <div class="o-container">
 
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<h5>h5: Headline would be placed here.</h5>
-							<label>Secector: <b>.h5, h5</b></label>
-						</div>
-						
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<h6>h6: Headline would be placed here.</h6>
-							<label>Secector: <b>.h6, h6</b></label>
-						</div>
+        <header class="c-head">
+            <h1>Typography Guide</h1>
+            <p>
+                This page demonstrates all typography styles and common content
+                scenarios used throughout the website.
+            </p>
+        </header>
 
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<p class="fs54">This resort is renowned as one of Canada’s premier destinations, having earned recognition from Golf Magazine as a Top 100 Golf Resort in the World for 2024-25.</p>
-							<label>Secector: <b>.fs54</b></label>
-						</div>
+        <!-- Headings -->
+        <section>
+            <h2>Headings</h2>
 
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<p class="fs40">This resort is renowned as one of Canada’s premier destinations, having earned recognition from Golf Magazine as a Top 100 Golf Resort in the World for 2024-25.</p>
-							<label>Secector: <b>.fs40</b></label>
-						</div>
+            <h1>H1 - Page Heading</h1>
+            <h2>H2 - Section Heading</h2>
+            <h3>H3 - Component Heading</h3>
+            <h4>H4 - Card Heading</h4>
+            <h5>H5 - Small Heading</h5>
+            <h6>H6 - Eyebrow Heading</h6>
+        </section>
 
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<p class="fs32">This resort is renowned as one of Canada’s premier destinations, having earned recognition from Golf Magazine as a Top 100 Golf Resort in the World for 2024-25.</p>
-							<label>Secector: <b>.fs32</b></label>
-						</div>
+        <!-- Paragraphs -->
+        <section>
+            <h2>Body Copy</h2>
 
-						<div class="o-flex__col pxy-2 u-bg-accent">
-							<p class="fs24">This resort is renowned as one of Canada’s premier destinations, having earned recognition from Golf Magazine as a Top 100 Golf Resort in the World for 2024-25.</p>
-							<label>Secector: <b>.fs24</b></label>
-						</div>
-						
-						
-						</div>
-					</div>
+            <p>
+                Standard paragraph text. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Integer posuere erat a ante.
+            </p>
 
-				</div>
-			</section>
+            <p class="lead">
+                Lead paragraph used beneath page titles and hero sections.
+            </p>
 
-			<!-- Base styles-->
-			<section class="o-section">
-				<div class="o-wrapper">
-					<aside class="">
-						<div class="c-stack py-md-2 pt-2 pb-4">
-							<p class="ch-md">
-								<strong>Bold paragraph:</strong> Earum adipisci pariatur tempore
-								optio, eaque aliquam repudiandae veniam hic? <a href>Test link</a>
-							</p>
-							<p class="ch-lg">
-								<strong>Bold paragraph:</strong> Earum adipisci pariatur tempore
-								optio, eaque aliquam repudiandae veniam hic? <a href>Test link</a>
-							</p>
-							<p  class="ch-xl">
-								Lorem ipsum dolor <em>italic text</em> sit amet consectetur
-								adipisicing elit. Nam soluta eveniet culpa rerum vero voluptate
-								error architecto ipsa earum illo? Lorem ipsum dolor sit, amet
-								consectetur adipisicing elit. Deleniti et porro veniam voluptatem?
-								Eligendi magni, eaque delectus quisquam, provident, vel nostrum eum
-								vero repudiandae architecto unde laudantium. Libero, dicta ipsa!
-							</p>
-							<ul>
-								<li>List item</li>
-								<li>List item</li>
-								<li>
-									<span>Nested list</span>
-									<ol>
-										<li>First item</li>
-										<li>Second item</li>
-									</ol>
-								</li>
-							</ul>
-						</div>
+            <small>
+                Small text, disclaimers, legal notes, timestamps, etc.
+            </small>
+        </section>
 
-						<div class="mt-1">
-							<button class="c-button c-button--primary"><span class="c-button__label">Learn More</span><span class="c-button__icon" ></span></button>
-							<button class="c-button c-button--primary"><span class="c-button__icon" ></span></button>
-							<button class="c-button c-button--secondary"><span class="c-button__label">Learn More</span></button>
-						</div>
-						<div class="mt-1">
-							<button class="c-button c-button--primary"><span class="c-button__icon" ></span></button>
-							<button class="c-button c-button--secondary"><span class="c-button__icon" ></span></button>
-							<button class="c-button"><span class="c-button__icon" ></span></button>
-						</div>
+        <!-- Links -->
+        <section>
+            <h2>Links</h2>
 
+            <p>
+                This paragraph contains an
+                <a href="#">inline text link</a>.
+            </p>
 
-					</aside>
-				</div>
-			</section>
+            <p>
+                Visit our
+                <a href="#">Resources Center</a>
+                for more information.
+            </p>
+        </section>
 
-			<!-- Section 1 - Default -->
-			<section class="o-section">
-				<div class="o-wrapper">
-					<div class="o-flex">
-						<div class="c-stack u-justify-center py-md-2 o-flex__col o-flex__col-4">
-							<h2 class="e-title">
-								Headline would <br />
-								be placed here.
-							</h2>
-							<p>
-								This resort is renowned as one of Canada’s premier destinations,
-								having earned recognition from Golf Magazine as a Top 100 Golf
-								Resort in the World for 2024-25. It features 47 thrilling golf
-								holes, including two world-renowned courses, an 11-hole short
-								course, 72 rooms of award-winning lodging at Cabot Links Lodge, 19
-								upscale Golf Villas, 30 luxurious homes, and three exceptional
-								on-site restaurants. An unforgettable experience awaits, as Cabot
-								Cape Breton is thoughtfully designed to excite and inspire at every
-								twist and turn.
-							</p>
-							<div class="mt-1">
- 								<button class="c-button c-button--primary" ><span class="c-button__label">Learn More</span><span class="c-button__icon" ></span></button>
-							</div>
-						</div>
-						<div class="o-flex__col o-flex__col-7">
-							<div class="c-image-wrap u-square">
-								<img
-									class="is-cover"
-									src="./src/assets/images/pexels-valeriya-11213775.jpg"
-									alt
-									loading="lazy"
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+        <!-- Lists -->
+        <section>
+            <h2>Unordered List</h2>
 
-			<!-- Section 2 - Nested -->
-			<section class="o-section u-bg-accent">
-				<div class="o-wrapper">
-					<div class="o-flex is-md-reverse u-text-center">
-						<div class="c-stack u-justify-center py-md-2 o-flex__col o-flex__col-5">
-							<div class="o-flex__col o-flex__col-10 mx-auto">
-							<h2 class="e-title">Curated Packages</h2>
-							<div class="mb-2">
-								<img
-									class="is-cover"
-									src="./src/assets/images/pexels-vanmalidate-769289.jpg"
-									alt
-									loading="lazy"
-								/>
-							</div>
-							<p class="ml-2 mr-2">
-								Escape to unforgettable food experiences paired with world-class accommodations. Our curated packages offer the perfect balance of price and premium comfort—tailored for 
-								your next great getaway.
-							</p>
-							<div class="mt-2">
-								<button class="c-button c-button--tertiary"><span class="c-button__label">Learn More</span><span class="c-button__icon"></span></button>
-							</div>
-							</div>
-						</div>
-						<div class="o-flex__col o-flex__col-6 u-sm-hide">
-							<img
-								class="is-cover"
-								src="./src/assets/images/pexels-vanmalidate-769289.jpg"
-								alt
-								loading="lazy"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
+            <ul>
+                <li>First list item</li>
+                <li>Second list item</li>
+                <li>Third list item</li>
+            </ul>
 
-			<!-- Section 3 - Inner -->
-			<section class="o-section is-reverse pt-3 pt-md-5">
-				<div class="o-wrapper">
-					<div class="u-md-text-center mb-3 mb-md-4">
-						<h2 class="e-title e-title--md">
-							Headline would <br class="u-sm-hide" /> be placed here.
-						</h2>
-					</div>
-					<div class="o-flex">
-						<div class="o-flex__col o-flex__col-4">
-							<h3 class="e-title e-title--sm">
-								 
-							</h3>
-							<p>
-								 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-								 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-								 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-								 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-							</p>
-							<p>
-								 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-								 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-							</p>
-							<div class="mt-2">
-								<button class="c-button c-button--primary"><span class="c-button__label">Learn More</span><span class="c-button__icon"></span></button>
-							</div>
-						</div>
-						<div class="o-flex__col o-flex__col-6">
-							<img
-								class="is-cover"
-								src="./src/assets/images/pexels-vanmalidate-784633.jpg"
-								alt
-								loading="lazy"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
+            <h2>Ordered List</h2>
 
-			<!-- Section 4 - Full -->
-			<section class="o-section is-md-reverse u-bg-accent ptb-md-0">
-				<div class="o-wrapper">
-					<div class="o-flex">
-						<div class="c-stack u-justify-center py-md-2 o-flex__col o-flex__col-4 mr-1">
-							<h2 class="e-title">Headline would be placed here.</h2>
-							<p>
-								This resort is renowned as one of Canada’s premier destinations,
-								having earned recognition from Golf Magazine as a Top 100 Golf
-								Resort in the World for 2024-25. It features 47 thrilling golf
-								holes, including two world-renowned courses, an 11-hole short
-								course, 72 rooms of award-winning lodging at Cabot Links Lodge, 19
-								upscale Golf Villas, 30 luxurious homes, and three exceptional
-								on-site restaurants. An unforgettable experience awaits, as Cabot
-								Cape Breton is thoughtfully designed to excite and inspire at every
-								twist and turn.
-							</p>
-							<div class="mt-1">
-								<button class="c-button c-button--secondary"><span class="c-button__label">Learn More</span></button>
-							</div>
-						</div>
-						<div class="o-flex__col o-flex__col-6">
-							<video
-								class="is-cover u-portrait"
-								autoplay
-								muted
-								loop
-								playsinline
-								aria-hidden="true"
-							>
-								<source src="./src/assets/video/Dummy.mp4" type="video/mp4" />
-								Your browser does not support the video tag.
-							</video>
-						</div>
-					</div>
-				</div>
-			</section>
+            <ol>
+                <li>Create account</li>
+                <li>Verify email</li>
+                <li>Complete profile</li>
+            </ol>
+        </section>
+
+        <!-- Quote -->
+        <section>
+            <h2>Blockquote</h2>
+
+            <blockquote>
+                “Good typography is invisible. Bad typography is everywhere.”
+            </blockquote>
+
+            <cite>— Design System Example</cite>
+        </section>
+
+        <!-- Weights -->
+        <section>
+            <h2>Font Weight Utilities</h2>
+
+            <p class="fw-100">Weight 100</p>
+            <p class="fw-200">Weight 200</p>
+            <p class="fw-300">Weight 300</p>
+            <p class="fw-400">Weight 400</p>
+            <p class="fw-500">Weight 500</p>
+            <p class="fw-600">Weight 600</p>
+            <p class="fw-700">Weight 700</p>
+            <p class="fw-800">Weight 800</p>
+            <p class="fw-900">Weight 900</p>
+        </section>
+
+        <!-- Character Width -->
+        <section>
+            <h2>Readable Content Width</h2>
+
+            <p class="ch-40">
+                This paragraph is constrained to roughly forty characters per
+                line, making it easier to read long-form content.
+            </p>
+        </section>
+
+        <!-- Line Clamp -->
+        <section>
+            <h2>Line Clamp Utility</h2>
+
+            <p class="u-line-clamp" style="--clamp-lines: 3;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum euismod, nisi vel consectetur interdum, nisl nisi
+                consectetur nisi, euismod aliquam nisl nisi eu nisl. Sed
+                dignissim feugiat turpis, non pretium magna tincidunt vel.
+                Curabitur eget arcu nec lorem faucibus volutpat.
+            </p>
+        </section>
+
+        <!-- Buttons -->
+        <section>
+            <h2>Buttons</h2>
+
+            <div class="c-btn-wrap">
+                <a href="#" class="c-button">Primary Button</a>
+
+                <a href="#" class="c-button c-button--bordered">
+                    Secondary Button
+                </a>
+            </div>
+        </section>
+
+        <!-- Blog Content Example -->
+        <section>
+            <h2>Blog Article Example</h2>
+
+            <article>
+                <h1>How Typography Improves User Experience</h1>
+
+                <p>
+                    Published June 2026 • 5 min read
+                </p>
+
+                <p>
+                    Typography is one of the most important aspects of a design
+                    system because it affects readability, accessibility, and
+                    visual hierarchy.
+                </p>
+
+                <h2>Why Hierarchy Matters</h2>
+
+                <p>
+                    Proper heading structure helps users scan content quickly.
+                </p>
+
+                <ul>
+                    <li>Improves accessibility</li>
+                    <li>Creates visual structure</li>
+                    <li>Enhances readability</li>
+                </ul>
+
+                <blockquote>
+                    Great typography creates a seamless reading experience.
+                </blockquote>
+
+                <a href="#" class="c-button">
+                    Read More
+                </a>
+            </article>
+        </section>
+
+    </div>
+</section>
+
+	<section class="c-block u-bg-accent">
+		<div class="o-container">
+			<h2>.o-container</h2>
+			<p>Default centered container.</p>
+		</div>
+	</section>
+
+	<section class="c-block">
+		<div class="o-container o-container--pull-left">
+			<h2>.o-container--pull-left</h2>
+			<p>Content aligned toward left edge.</p>
+		</div>
+	</section>
+
+	<section class="c-block">
+		<div class="o-container o-container--pull-right">
+			<h2>.o-container--pull-right</h2>
+			<p>Content aligned toward right edge.</p>
+		</div>
+</section>
+
+<section>
+    <h2>Grid System</h2>
+
+    <p>
+        Demonstration of available column utility classes.
+    </p>
+
+    <!-- 50 / 50 -->
+    <h3>.col-50</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-50">
+            <div class="demo-box">50%</div>
+        </div>
+
+        <div class="o-flex__col col-50">
+            <div class="demo-box">50%</div>
+        </div>
+    </div>
+
+    <!-- MD 50 -->
+    <h3>.col-md-50</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-md-50">
+            <div class="demo-box">col-md-50</div>
+        </div>
+
+        <div class="o-flex__col col-md-50">
+            <div class="demo-box">col-md-50</div>
+        </div>
+    </div>
+
+    <!-- MD 33 -->
+    <h3>.col-md-33</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-md-33"><div class="demo-box">33%</div></div>
+        <div class="o-flex__col col-md-33"><div class="demo-box">33%</div></div>
+        <div class="o-flex__col col-md-33"><div class="demo-box">33%</div></div>
+    </div>
+
+    <!-- MD 25 -->
+    <h3>.col-md-25</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-md-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-md-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-md-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-md-25"><div class="demo-box">25%</div></div>
+    </div>
+
+    <!-- MD 20 -->
+    <h3>.col-md-20</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-md-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-md-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-md-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-md-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-md-20"><div class="demo-box">20%</div></div>
+    </div>
+
+    <!-- LG 50 -->
+    <h3>.col-lg-50</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-lg-50">
+            <div class="demo-box">50%</div>
+        </div>
+
+        <div class="o-flex__col col-lg-50">
+            <div class="demo-box">50%</div>
+        </div>
+    </div>
+
+    <!-- LG 33 -->
+    <h3>.col-lg-33</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-lg-33"><div class="demo-box">33%</div></div>
+        <div class="o-flex__col col-lg-33"><div class="demo-box">33%</div></div>
+        <div class="o-flex__col col-lg-33"><div class="demo-box">33%</div></div>
+    </div>
+
+    <!-- LG 25 -->
+    <h3>.col-lg-25</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-lg-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-lg-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-lg-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-lg-25"><div class="demo-box">25%</div></div>
+    </div>
+
+    <!-- LG 20 -->
+    <h3>.col-lg-20</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-lg-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-lg-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-lg-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-lg-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-lg-20"><div class="demo-box">20%</div></div>
+    </div>
+
+    <!-- XL 25 -->
+    <h3>.col-xl-25</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-xl-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-xl-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-xl-25"><div class="demo-box">25%</div></div>
+        <div class="o-flex__col col-xl-25"><div class="demo-box">25%</div></div>
+    </div>
+
+    <!-- XL 20 -->
+    <h3>.col-xl-20</h3>
+
+    <div class="o-flex" style="--gapy:24px;">
+        <div class="o-flex__col col-xl-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-xl-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-xl-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-xl-20"><div class="demo-box">20%</div></div>
+        <div class="o-flex__col col-xl-20"><div class="demo-box">20%</div></div>
+    </div>
+
+</section>
+		
 		</main>
+
 		
 	</body>
 </html>
